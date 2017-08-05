@@ -19,10 +19,6 @@ function openTab(tabName, elmnt, color) {
     elmnt.style.backgroundColor = color;
 }
 
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-
-
 /*
 Header example - this is the tutorial I look at while building the header of the blog
 https://www.w3schools.com/howto/howto_js_tab_header.asp
