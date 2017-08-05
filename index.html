@@ -8,15 +8,15 @@
         <link rel="stylesheet" type="text/css" href="css/indexStyle.css">
         <script src="javascript/indexJavascript.js"></script>
     </head>
-<body>
+<body onload="openTab('Blogposts', document.getElementById('postsBtn'), 'green')">
 
   <button class="tablink" onclick="openTab('Aboutme', this, 'red')" id="defaultOpen">About me</button>
-  <button class="tablink" onclick="openTab('Blogposts', this, 'green')">Blog posts</button>
+  <button class="tablink" onclick="openTab('Blogposts', this, 'green')" id="postsBtn">Blog posts</button>
   <button class="tablink" onclick="openTab('Englishclass', this, 'blue')">English class</button>
 
   <div id="Aboutme" class="tabcontent">
     <h3>Helio Rui Ramos Freitas</h3>
-    <p>I am Helio Rui. I currently work as a software developer. The programming language I use at work is Java.</p>
+    <p>I am Helio Rui. I currently work as a software developer.</p>
  </div>
 
  <div id="Blogposts" class="tabcontent">
@@ -24,7 +24,7 @@
  </div>
 
  <div id="Englishclass" class="tabcontent">
-   <a href="heliorrfreitas/EnglishClass/tree/master/introducing_myself" style="color:#FFFFFF;">Introducing yourself</a>
+   <a href="heliorrfreitas/EnglishClass/tree/master/introducing_myself">Introducing yourself</a>
  </div>
 
 </body>
