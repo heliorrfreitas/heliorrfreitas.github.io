@@ -18,14 +18,8 @@
 
 /* Set default styles for tab content */
 .tabcontent {
-   color: white;
+   color: black;
    display: none;
    padding: 50px;
    text-align: center;
 }
-
-/* Style each tab content individually */
-#Aboutme {background-color:red;}
-#Blogposts {background-color:green;}
-#Englishclass {background-color:blue;}
-header
