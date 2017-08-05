@@ -4,14 +4,31 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Helio Rui Ramos Freitas </title>
-        <meta name="description" content="Typing Color Names">
+        <meta name="description" content="My Blog">
+        <link rel="stylesheet" type="text/css" href="headerStyle.css">
+        <script src="headerJavascript.js"></script>
     </head>
-    <body>
-      <div style="display: inline">
-        <div>Posts</div>
-        <div>About me</div>
-      </div>
-    
-      <div></div>  
-    </body>
-  </hmtl>
+<body>
+
+  <button class="tablink" onclick="openTab('Aboutme', this, 'red')" id="defaultOpen">About me</button>
+  <button class="tablink" onclick="openTab('Blogposts', this, 'green')">Blog posts</button>
+  <button class="tablink" onclick="openTab('Englishclass', this, 'blue')">English class</button>
+
+  <div id="Aboutme" class="tabcontent">
+   <h3>London</h3>
+   <p>London is the capital city of England.</p>
+ </div>
+
+ <div id="Blogposts" class="tabcontent">
+   <a href="firstPost.html">First post</a><br>
+   <a href="secondPost.html">Second post</a><br>
+   <a href="secondPost.html">Second post</a><br>
+
+ </div>
+
+ <div id="Englishclass" class="tabcontent">
+   <a href="../EnglishClass/tree/master/introducing_myself" style="color:#FFFFFF;">AEEEE</a>
+ </div>
+
+</body>
+</html>
