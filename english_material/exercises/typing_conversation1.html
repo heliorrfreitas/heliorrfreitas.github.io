@@ -1,0 +1,50 @@
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript Arrays</h2>
+<p id="demo"></p>
+<input type="text" id="textDemo">
+<button type="button" onclick="showNext()" id="btnConfirm">Click Me!</button>
+
+<script>
+var cars = ["What is your name?", "Nice to meet you, ", "How old are you?",];
+var indice = 0;
+var userName = "";
+
+document.getElementById("demo").innerHTML = cars[indice];
+
+function showNext(){
+	var userInput = document.getElementById('textDemo').value;
+    document.getElementById('textDemo').value = "";
+
+		if(indice == 0){
+      if(userInput.includes("my name is")){
+          indice = indice + 1;
+          var name = userInput.split(" ");
+          userName = name[name.length - 1];
+          document.getElementById("demo").innerHTML = cars[indice] + userName + '!';
+      }
+    }else if(indice == 2){
+    	if(userInput.includes("I am")){
+          indice = indice + 1;
+          document.getElementById("demo").innerHTML = cars[indice];
+      }
+    }else	if(indice == 1){
+			if(userInput.includes("nice to meet you too")){
+					indice = indice + 1;
+					document.getElementById("demo").innerHTML = cars[indice];
+			}
+		}
+
+		if(indice > 2){
+			document.getElementById("demo").innerHTML = "GOOD JOB";
+			document.getElementById("textDemo").style.visibility = "hidden";
+			document.getElementById("btnConfirm").style.visibility = "hidden";
+		}
+}
+
+</script>
+</body>
+</html>
