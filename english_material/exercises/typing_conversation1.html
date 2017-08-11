@@ -7,41 +7,64 @@
 <p id="demo"></p>
 <input type="text" id="textDemo">
 <button type="button" onclick="showNext()" id="btnConfirm">Click Me!</button>
-
 <script>
-var cars = ["What is your name?", "Nice to meet you, ", "How old are you?",];
+
+var robotSentences = ["What is your name?", "My name is Mr. Tech Robot Teacher.",
+"How are you?", "I am good!", "How old are you?", "I am very young.", "Where are you from?",
+"I am from the internet.", "Nice to meet you!"]
+
 var indice = 0;
 var userName = "";
 
-document.getElementById("demo").innerHTML = cars[indice];
+document.getElementById("demo").innerHTML = robotSentences[indice];
 
 function showNext(){
-	var userInput = document.getElementById('textDemo').value;
+		var userInput = document.getElementById('textDemo').value;
     document.getElementById('textDemo').value = "";
 
-		if(indice == 0){
-      if(userInput.includes("my name is")){
-          indice = indice + 1;
-          var name = userInput.split(" ");
-          userName = name[name.length - 1];
-          document.getElementById("demo").innerHTML = cars[indice] + userName + '!';
-      }
-    }else if(indice == 2){
-    	if(userInput.includes("I am")){
-          indice = indice + 1;
-          document.getElementById("demo").innerHTML = cars[indice];
-      }
-    }else	if(indice == 1){
-			if(userInput.includes("nice to meet you too")){
-					indice = indice + 1;
-					document.getElementById("demo").innerHTML = cars[indice];
-			}
+		var robotAnswer = "";
+
+		if(userInput.includes("my name is")){
+          indice = 2;
+					answer = robotSentences[indice];
+
+					if (userInput.includes("what is your name")) {
+						indice = 1;
+						answer = robotSentences[indice] + robotSentences[indice + 1];
+					}
+
+          document.getElementById("demo").innerHTML = answer;
+    }
+
+		if(userInput.includes("i am good")){
+					indice = 5;
+					answer = robotSentences[indice];
+
+					if (userInput.includes("how old are you")) {
+						indice = 4;
+						answer = robotSentences[indice] + robotSentences[indice + 1];
+					}
+
+					document.getElementById("demo").innerHTML = answer;
 		}
 
-		if(indice > 2){
-			document.getElementById("demo").innerHTML = "GOOD JOB";
-			document.getElementById("textDemo").style.visibility = "hidden";
-			document.getElementById("btnConfirm").style.visibility = "hidden";
+		if(userInput.includes("i am from")){
+					indice = 7;
+					answer = robotSentences[indice];
+
+					if (userInput.includes("where are you from")) {
+						indice = 6;
+						answer = robotSentences[indice] + robotSentences[indice + 1];
+					}
+
+					document.getElementById("demo").innerHTML = answer;
+		}
+
+		if(userInput.includes("nice to meet you")){
+					indice = 8;
+					answer = robotSentences[indice];
+
+					document.getElementById("demo").innerHTML = answer;
 		}
 }
 
