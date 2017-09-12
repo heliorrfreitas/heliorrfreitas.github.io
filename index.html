@@ -1,33 +1,177 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Helio Rui Ramos Freitas </title>
-        <meta name="description" content="My Blog">
-        <link rel="stylesheet" type="text/css" href="css/indexStyle.css">
-        <script src="javascript/indexJavascript.js"></script>
-    </head>
-<body onload="openTab('Blogposts', document.getElementById('postsBtn'), 'green')">
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
-  <button class="tablink" onclick="openTab('Aboutme', this, 'red')" id="defaultOpen">About me</button>
-  <button class="tablink" onclick="openTab('Blogposts', this, 'green')" id="postsBtn">Blog posts</button>
-  <button class="tablink" onclick="openTab('Englishclass', this, 'blue')">English class</button>
+<style>
+body {
+    font-family: "Verdana", sans-serif;
+    transition: background-color .5s;
+}
 
-  <div id="Aboutme" class="tabcontent">
-    <h3>Helio Rui Ramos Freitas</h3>
-    <p>I am Helio Rui. I currently work as a software developer.</p>
- </div>
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
 
- <div id="Blogposts" class="tabcontent">
-   <p>No posts yet.</p>
- </div>
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
 
- <div id="Englishclass" class="tabcontent">
-   <a href="../english_material/introducing_yourself/index.html">Introducing youself</a><br>
-   <a href="../english_material/exercises/exercisesIntroducingYourself.html">Exercise</a><br>
-   <a href="../english_material/exercises/typing_conversation1.html">Let's talk</a><br>
- </div>
+.sidenav a:hover {
+    color: #f1f1f1;
+}
 
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+a{
+    color:#000000;
+}
+
+#mySidenav {
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    cursor:pointer;
+}
+
+#mainContent{
+  position: absolute;
+  left:20%;
+}
+
+a:hover {
+    cursor:pointer;
+}
+
+</style>
+</head>
+<body onload="openBlog();openTab('Blogposts', this, '#32CD32')">
+
+<div id="mySidenav" class="sidenav" style="color:#FFFFFF">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div onclick="openAboutme();openTab('Aboutme', this, 'orange')" >About me</div>
+  <div onclick="openBlog();openTab('Blogposts', this, '#32CD32')">Blog</div>
+  <div onclick="openEnglishclass();openTab('Englishclass', this, '#40E0D0')">English class</div>
+</div>
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="changeMenuNav();" id="mainPage">&#9776;
+      <div id="toolbar" style="text-align:center;background-color: #00FF00;">Blog</div>
+  </span>
+
+  <div id="mainContent">
+    <div id="Aboutme" class="tabcontent">
+          <h3>Helio Rui Ramos Freitas</h3>
+          <p>I am Helio Rui. I currently work as a software developer.</p>
+      </div>
+
+      <div id="Blogposts" class="tabcontent">
+          <p>No posts yet.</p>
+      </div>
+
+      <div id="Englishclass" class="tabcontent">
+          <a href="../english_material/exercises/exercisesIntroducingYourself.html">Exercise</a><br>
+          <a href="../english_material/exercises/typing_conversation1.html">Let's talk</a><br>
+          <a href="../english_material/introducing_yourself/index.html">Introducing youself</a><br>
+    </div>
+  </div>
+
+</div>
+<script>
+var isMenuOpen = false;
+
+function changeMenuNav(){
+  	if(isMenuOpen == false){
+      	openNav();
+      }else{
+      	closeNav();
+      }
+}
+
+function openNav() {
+    isMenuOpen = true;
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    isMenuOpen = false;
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+
+
+function openAboutme(){
+    document.getElementById("toolbar").innerHTML = "About me";
+    document.getElementById("toolbar").style.backgroundColor = "orange";
+    closeNav();
+}
+
+function openBlog(){
+    document.getElementById("toolbar").innerHTML = "Blog";
+    document.getElementById("toolbar").style.backgroundColor = "#32CD32";
+    closeNav();
+}
+
+function openEnglishclass(){
+    document.getElementById("toolbar").innerHTML = "English class";
+    document.getElementById("toolbar").style.backgroundColor = "#40E0D0";
+    closeNav();
+}
+
+function openTab(tabName, elmnt, color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+
+    document.getElementById(tabName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+}
+
+</script>
 </body>
 </html>
