@@ -11,3 +11,9 @@ function checkAnswer(tagId, userAnswer, expectedAnswer) {
     document.getElementById(tagId).style.border = " solid #FF0000";
   }
 }
+
+function checkAnswerOnEnter(event, tagId, userAnswer, expectedAnswer) {
+    if(event.keyCode == 13){
+        checkAnswer(tagId, userAnswer, expectedAnswer);
+    }
+}
