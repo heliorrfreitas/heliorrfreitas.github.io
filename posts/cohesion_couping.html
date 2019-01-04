@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Helio Rui Ramos Freitas - Blog</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="../css/clean-blog.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">Helio Rui Ramos Freitas</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item" style="display:none;">
+              <a class="nav-link" href="../about.html">About</a>
+            </li>
+            <li class="nav-item" style="display:none;">
+              <a class="nav-link" href="../post.html">Sample Post</a>
+            </li>
+            <li class="nav-item" style="display:none;">
+              <a class="nav-link" href="../contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('../img/post-bg.jpg')">
+    <!-- -->
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>Cohesion and Coupling</h1>
+              <h2 class="subheading"></h2>
+              <span class="meta">Posted by Helio Rui Ramos Freitas
+                <a href="#"></a>
+                on Janurary 4, 2019</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+
+            <p>
+                Cohesion is a way to say how much the functions in one module are related to each other. If the functions in a module have a strong connection, then they have a high cohesion because they work on the same problem. For example, the Model View Controller or MVC describes how to organize code separating it by purpose. Some modules will work handling the data, some will work handling application functionalities, and others will work on making the application look nice for the user. Adding code which handles the data in the module that works with the functionalities is a example of low cohesion because it will be inconsistent with the other code present in that module. Also, it will add more responsability to that module, and each module should have one responsability only. The cohesion is a measurement in a single module. It is a measurement of the functions are related to each other.
+            </p>
+            <p>
+
+                Coupling is how much the modules are related to each other, it evaluates how much they rely on each other to work. In other words, it is how strong their connection is. A good approach is to have a low coupling because frequently it means the code is well structured. I also think it may be considered good to have a low coupling because if there is a bug in a module, this bug has a lower chance of impacting on other modules. On the other hand, if they are very dependable of each other, the whole system may crash.
+            </p>
+            <p>Low coupling is usually related with high cohesion and vice versa. </p>
+
+            <p>
+                These two software quality metrics were invented by Larry Constantine back in the 1960s. Larry Constantine, is a software engineer and a college professor. He also made several contributions to the concepts and techniques used nowadays in software engineering.
+            </p>
+
+            <h4>References</h4>
+            <p><a href="https://www.codecademy.com/articles/mvc">MVC(Model View Controller)</a></p>
+            <p><a href="https://en.wikipedia.org/wiki/Cohesion_(computer_science)">Wikipedia, cohesion</a></p>
+            <p><a href="https://en.wikipedia.org/wiki/Coupling_%28computer_programming%29">Wikipedia, coupling</a></p>
+            <p><a href="https://en.wikipedia.org/wiki/Larry_Constantine">Wikipedia, Larry Constantine</a></p>
+            <p><a href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882?SubscriptionId=AKIAILSHYYTFIVPWUY6Q&tag=duckduckgo-ffab-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0132350882">Clean Code, Robert C. Martin</a></p>
+            <p><a href="https://www.devmedia.com.br/entendendo-coesao-e-acoplamento/18538">Article about cohesion and coupling(in portuguese)</a></p>
+
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item" style="display:none;">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item" style="display:none;">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/heliorrfreitas">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; Helio Rui Ramos Freitas</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../js/clean-blog.min.js"></script>
+
+  </body>
+<!-- Template from Startbootstrap
+
+https://startbootstrap.com/template-overviews/clean-blog/
+Photo on <a href="https://foter.com">Foter.com</a>
+-->
+</html>
