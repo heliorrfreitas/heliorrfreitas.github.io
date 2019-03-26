@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="../checkAnswerFromTextInput.js"></script>
+  <script src="textBold.css"></script>
+</head>
+
+<body>
+<h3>Exercises</h3>
+
+<p style="font-weight:bold;">1. Complete the sentences with the verb be.</p>
+
+<p>I   <input type="text" onblur="checkAnswer(this.id, this.value, 'am')" onkeypress="checkAnswerOnEnter(event,this.id, this.value, 'am')" id="question1a" size="5"> a man.</p>
+<p>She   <input type="text" onblur="checkAnswer(this.id, this.value, 'is')" onkeypress="checkAnswerOnEnter(event,this.id, this.value, 'is')" id="question1b" size="5"> a woman.</p>
+<p>We   <input type="text" onblur="checkAnswer(this.id, this.value, 'are')" onkeypress="checkAnswerOnEnter(event,this.id, this.value, 'are')" id="question1c" size="5"> a team.</p>
+<p>I   <input type="text" onblur="checkAnswer(this.id, this.value, 'am')" onkeypress="checkAnswerOnEnter(event,this.id, this.value, 'am')" id="question1d" size="5"> 40 years old.</p>
+<p>He   <input type="text" onblur="checkAnswer(this.id, this.value, 'is')" onkeypress="checkAnswerOnEnter(event,this.id, this.value, 'is')" id="question1e" size="5"> a man.</p>
+
+</body>
+</html>
