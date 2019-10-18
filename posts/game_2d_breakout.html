@@ -68,7 +68,7 @@
     <article>
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="">
 
                 <canvas id="myCanvas" width="480" height="320"></canvas>
 
@@ -77,7 +77,9 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto">
+            <div >
+
+                <!-- class="col-lg-8 col-md-10 mx-auto" -->
                 <ul>
                     <li>I followed the tutorial from <a href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript">Mozilla 2D Breakout Tutorial</a>.</li>
                     <li>Started from the tutorial above and made a few modifications of my own.
@@ -110,7 +112,7 @@
         var paddleX = (canvas.width-paddleWidth) / 2;
         var rightPressed = false;
         var leftPressed = false;
-        var speedMultiplier = 1.01;
+        var speedMultiplier = 1.09;
         var colors = ["green", "yellow", "red", "orange", "#88edff", "#39ff14", "#da14ff", "#6514ff", "#ff80d5", "#66ffff", "#ff8000"];
         var colorIndex = 0;
         var brickRowCount = 3;
@@ -132,13 +134,15 @@
             }
         }
 
-        canvas.addEventListener("mousedown", e =>{
-            startGame = true;
-        })
 
         document.addEventListener("keydown", keyDownHandler, false);
         document.addEventListener("keyup", keyUpHandler, false);
         document.addEventListener("mousemove", mouseMoveHandler, false);
+
+
+        canvas.addEventListener("mousedown", e =>{
+            startGame = true;
+        });
 
         function keyDownHandler(e) {
             if(e.key == "Right" || e.key == "ArrowRight") {
@@ -147,7 +151,6 @@
             else if(e.key == "Left" || e.key == "ArrowLeft") {
                 leftPressed = true;
             }
-
         }
 
         function keyUpHandler(e) {
@@ -160,11 +163,12 @@
         }
 
         function mouseMoveHandler(e){
-            var relativeX = e.clientX - canvas-offsetLeft;
+            var relativeX = e.clientX - canvas.offsetLeft;
 
-            if(relativex > 0 && relativex < canvas.width - paddleWidth / 2){
-                paddleX = relativex - paddleWidth / 2;
+            if(relativeX > 0 + paddleWidth / 2 && relativeX < canvas.width - paddleWidth / 2){
+                paddleX = relativeX - paddleWidth / 2;
             }
+
         }
 
         function checkWallColision(){
