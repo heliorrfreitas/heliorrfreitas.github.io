@@ -81,9 +81,10 @@
               <h2 class="post-title">
                 Game: 2D Breakout
               </h2>
-              <h3 class="post-subtitle">
-              </h3>
-            </a>
+              <h6 class="post-subtitle">
+                  javascript, canvas, html5, game</a>
+              </h6>
+
             <p class="post-meta">
                 Posted on October 17, 2019</p>
           </div>
@@ -93,9 +94,10 @@
               <h2 class="post-title">
                 Searching for String Patterns using Bash
               </h2>
-              <h3 class="post-subtitle">
-              </h3>
-            </a>
+              <h6 class="post-subtitle">
+                  bash, regex</a>
+              </h6>
+
             <p class="post-meta">
                 Posted on February 5, 2019</p>
           </div>
@@ -105,9 +107,9 @@
               <h2 class="post-title">
                 Cohesion and Coupling
               </h2>
-              <h3 class="post-subtitle">
-              </h3>
-            </a>
+              <h6 class="post-subtitle">
+                  software engineering</a>
+              </h6>
             <p class="post-meta">
                 Posted on January 4, 2019</p>
           </div>
@@ -118,9 +120,9 @@
               <h2 class="post-title">
                 What is a REPL?
               </h2>
-              <h3 class="post-subtitle">
-              </h3>
-            </a>
+              <h6 class="post-subtitle">
+                software engineering</a>
+              </h6>
             <p class="post-meta">
                 Posted on July 17, 2018</p>
           </div>
@@ -130,9 +132,9 @@
               <h2 class="post-title">
                 Welcome!
               </h2>
-              <h3 class="post-subtitle">
-              </h3>
-            </a>
+              <h6 class="post-subtitle">
+                  first, welcome, test</a>
+              </h6>
             <p class="post-meta">
                 Posted on January 2, 2018
             </p>
@@ -185,20 +187,25 @@
 
     <script>
     function searchPost() {
-        var input, filter, container, posts, a, i, txtValue;
+        var input, filter, container, posts, a, tags, atags, i, txtValue, txtValueTags;
         input = document.getElementById("myInput");
         filter = input.value.toUpperCase();
         container = document.getElementById("all-links");
         posts = container.getElementsByClassName("post-preview");
+        tags = container.getElementsByClassName("post-subtitle");
         for (i = 0; i < posts.length; i++) {
             a = posts[i].getElementsByTagName("a")[0];
             txtValue = a.textContent || a.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+
+            atags = tags[i].getElementsByTagName("a")[0];
+            txtValueTags = atags.textContent || atags.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1 || txtValueTags.toUpperCase().indexOf(filter) > -1) {
                 posts[i].style.display = "";
             } else {
                 posts[i].style.display = "none";
             }
         }
+
     }
     </script>
 
