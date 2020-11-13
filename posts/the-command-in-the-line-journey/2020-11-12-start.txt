@@ -1,0 +1,7 @@
+
+
+I have been using the terminal for some time now. I am not sure when I started, what I remember is that I installed Fedora on my computer in 2017. It was not my first option though. I was going to install Debian, but I had a problem with the uefi boot and decided to use Fedora instead since it was easier for me to install at the time. I just really wanted to get to use more GNU/Linux operation systems, and I didn't care so much about which one. I am discovering my prefered operating system as I go. 
+
+Anyway, I learned a lot about the command line during this time. I am writing this on November 12 2020. I still use Fedora. I want to change though. But this is a topic for other time. Right now I decided to learn a lot more about the command line, I want to actually master the shell. I know how to navigate, create or edit, use the basics of Vim, and some other stuff. 
+
+But at this moment I feel like I want to further up my knowledge into this subject and become a badass at it. And in trying to do so, I will teach this here. For anyone who misteriosly end up finding my, no marketing at all, blog. I will do my best, believe me.  
