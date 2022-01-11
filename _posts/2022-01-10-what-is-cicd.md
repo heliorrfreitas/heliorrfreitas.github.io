@@ -20,11 +20,15 @@ This step triggers the next which is the continuous deployment.
 
 ### References
 
-https://www.redhat.com/en/topics/devops/what-is-ci-cd
+- <a href="https://www.redhat.com/en/topics/devops/what-is-ci-cd" alt="Link to an article used for reference. Article title what is ci cd">
+RedHat: What is CI/CD? 
+</a>
 
-https://developers.redhat.com/blog/2017/09/06/continuous-integration-a-typical-process
+- <a href="https://developers.redhat.com/blog/2017/09/06/continuous-integration-a-typical-process" alt="Link to an article used for reference. Article title continuous integration a typical process">
+RedHat: Continuous integration a typical process 
+</a>
 
-Continuous Integration vs. Continuous Delivery vs. Continuous Deployment
+- Continuous Integration vs. Continuous Delivery vs. Continuous Deployment
 by Brent Laster## What is CI?
 
 
