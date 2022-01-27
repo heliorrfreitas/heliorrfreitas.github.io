@@ -29,6 +29,4 @@ RedHat: Continuous integration a typical process
 </a>
 
 - Continuous Integration vs. Continuous Delivery vs. Continuous Deployment
-by Brent Laster## What is CI?
-
-
+by Brent Laster. Book on O'Reilly.
