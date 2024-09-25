@@ -5,11 +5,11 @@ title: Home
 
 # Welcome
 
-I am Helio Rui. I have 5 years of professional experience working as a web/software developer.
+I am Helio Rui. I have 8 years of professional experience working as a web/software developer.
 
-I have a bachelor of science in computer science. Also, I like to study about topics related to computer programming, software development process, mathematics, astronomy and more.
+I have a bachelor of science in computer science. Also, I like to study about topics related to computer programming, software development process, exercise, nutrition, and more.
 
-I have worked on lots of different projects like ERP systems, websites, Wordpress plugins, Wordpress themes, desktop applications, computer games, android apps, MacOS apps, and even in robotic projects.
+I have worked on lots of different projects like the development of microserices, I built REST APIs and JSON APIs, ERP systems, websites, Wordpress plugins, Wordpress themes, desktop applications, computer games, android apps, MacOS apps, and even in robotic projects.
 
 To conclude, I am very interested in technology and problem solving. You can click on the icons below to checkout either my Github, or my Linkedin. 
 
